@@ -1,0 +1,32 @@
+{% extends 'basic.html' %}
+
+{% block judul %} Edit Berita{% endblock %}
+
+{% block JudulKonten %}
+<h3 class="box-title"> Edit Berita </h3>
+{% endblock %}
+
+{% block konten%}
+<form action="{{url_for('proses_ubah')}}" method="POST">
+    {% for row in hasil %}
+        <div class="form-group">
+            <input type="hidden" name="id" value="{{ row.0 }}">
+            <label>Tanggal</label>
+            <input type="date" name="edit_tanggal" class="form-control" value="{{row.1}}">
+        </div>
+        <div class="form-group">
+            <label>Judul</label>
+            <input type="text" name="edit_judul" class="form-control"  value="{{row.2}}">
+        </div>
+        <div class="form-group">
+            <label>Isi Berita</label>
+            <textarea class="form-control" name="edit_isi" rows="7"> {{row.3}} </textarea>
+        </div>
+    {% endfor %}
+
+    <div class="box-footer">
+        <button type="reset" class="btn btn-default"> Cancel </button>
+        <button type="submit" class="btn btn-primary pull-right"> Submit </button>
+    </div>
+</form>
+{% endblock %}

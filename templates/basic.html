@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/font-awesome.min.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/ionicons.min.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/dataTables.bootstrap.min.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/AdminLTE.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/_all-skins.min.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/motor.css')}}" />
+
+    <title>Halaman {% block judul%} {% endblock %}</title>
+  </head>
+  <body>
+    <!-- bagian navbar -->
+    <div class="bg-red-active">
+      <div class="bg-warning text-dark">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary-">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">ALIF-NEWS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- tutup  navbar -->
+
+      {% block JudulKonten %} {% endblock %}
+
+      <!-- diisi tabel-->
+      <div class="box-body">{% block konten %} {% endblock %}</div>
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+    <!-- tutup table -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/dataTables.bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.slimscroll.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/fastclick.js')}}"></script>
+    <script src="{{url_for('static', filename='js/adminlte.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/demo.js')}}"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+/* animasi motor */
+
+.motor-img {
+  width: 250px;
+  height: auto;
+  position: relative;
+  top: 10vh;
+  left: -600px;
+  animation: carAnimation 10s infinite ease;
+}
+@keyframes carAnimation {
+  from {
+    left: -600px;
+  }
+  to {
+    left: 110vw;
+  }
+}
